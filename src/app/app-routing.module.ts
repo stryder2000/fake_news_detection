@@ -8,7 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AuthGuard } from './auth/auth.guard';
 import { FarmCallComponent } from './farm-call/farm-call.component';*/
 
-const routes :Routes = [
+const routes : Routes = [
 
     {path:'', component : LandingPageComponent},// structure of routing
     {path:'picupload', component : PicUploadComponent, },
