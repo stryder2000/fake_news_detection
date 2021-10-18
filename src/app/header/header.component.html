@@ -1,25 +1,23 @@
-<mat-toolbar color = "primary">
-  <span><a routerLink = "/">Fake News Detector</a></span><span></span>
-   <span class = "spacer "></span> <!--to seperate all the header elements to left or right -->
-  <ul>
-    <li *ngIf = "userIsAuthenticated">
-      <a mat-button routerLink = "/picupload" routerLinkActive= "mat-accent" >Picture Upload</a>
-    </li>
-    <li *ngIf = "userIsAuthenticated">
-      <a mat-button routerLink = "/vidupload" routerLinkActive= "mat-accent" >Video Upload</a>
-    </li>
-    <li *ngIf = "!userIsAuthenticated">
-      <a mat-button routerLink ="/" routerLinkActive = "mat-accent">Login </a>
-    </li>
-    <li *ngIf = "!userIsAuthenticated">
-      <a mat-button routerLink ="/" routerLinkActive = "mat-accent">Sign Up </a>
-    </li>
-    <li  *ngIf = "userIsAuthenticated">
-      <button mat-button (click)= "onLogout()">Logout </button>
-    </li>
+<div class="header">
+  <div>
+    <a routerLink="/" class="header__brand">Fake News Detector</a>
+  </div>
 
-  </ul>
-
-</mat-toolbar>
-
-
+  <div class="header__group">
+    <div *ngIf="userIsAuthenticated" class="header__button">
+      <a routerLink="/picupload">Picture Upload</a>
+    </div>
+    <div *ngIf="userIsAuthenticated" class="header__button">
+      <a routerLink="/vidupload">Video Upload</a>
+    </div>
+    <div *ngIf="!userIsAuthenticated" class="header__button">
+      <a routerLink="/">Login </a>
+    </div>
+    <div *ngIf="!userIsAuthenticated" class="header__button">
+      <a button routerLink="/">Sign Up </a>
+    </div>
+    <div *ngIf="userIsAuthenticated" class="header__button">
+      <a (click)="onLogout()">Logout</a>
+    </div>
+  </div>
+</div>

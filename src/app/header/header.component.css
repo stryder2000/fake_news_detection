@@ -1,16 +1,43 @@
-a{
+.header {
+  font-family: "SanFranciscoDisplayBlack", serif;
+  display: flex;
+  justify-content: space-between;
+  font-family: "SanFranciscoDisplayBlack", serif;
+  background-color: #333;
+  font-size: 1.4rem;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.header__brand {
   text-decoration: none;
-  color: white;
+  color: #f5f4f7;
+  padding: 1rem 0.8rem;
 }
-ul{
-  list-style: none;
-  padding : 0;
-  margin : 0 ;
-  display:flex;
+
+.header__group {
+  display: flex;
+  margin-right: 5px;
 }
-.spacer{
-  flex:1 1 auto ;
+
+.header__button {
+  text-decoration: none;
+  color: #c2c2c2;
+  padding: 1rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
 }
-span{
-  padding : 4;
+
+.header__button:hover {
+  background-color: rgba(94, 94, 94, 0.8);
+}
+
+.header__button a {
+  text-decoration: none;
+  color: #c2c2c2;
+}
+
+.header__button a:hover {
+  color: var(--color-white);
 }

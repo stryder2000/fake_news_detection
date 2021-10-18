@@ -9,13 +9,19 @@ html {
   padding: 0;
 }
 
+@font-face {
+  font-family: SanFranciscoDisplayBlack;
+  src: url(assets/font/SanFranciscoFont/SanFranciscoDisplay-Light.otf)
+    format("opentype");
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
   box-sizing: border-box;
   margin: 20px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "SanFranciscoDisplayBlack", serif;
 }
 
 .u-bg--white {
