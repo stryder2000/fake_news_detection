@@ -4,20 +4,37 @@
   </div>
 
   <div class="header__group">
-    <div *ngIf="userIsAuthenticated" class="header__button">
+    <div *ngIf="user" class="header__button">
       <a routerLink="/picupload">Picture Upload</a>
     </div>
-    <div *ngIf="userIsAuthenticated" class="header__button">
+    <div *ngIf="user" class="header__button">
       <a routerLink="/vidupload">Video Upload</a>
     </div>
-    <div *ngIf="!userIsAuthenticated" class="header__button">
-      <a routerLink="/">Login </a>
+    <div *ngIf="!user" class="header__button">
+      <a button class="btn btn-social btn-google" (click)="signInWithGoogle()"
+        >Login with Google
+      </a>
     </div>
-    <div *ngIf="!userIsAuthenticated" class="header__button">
-      <a button routerLink="/">Sign Up </a>
+    <div *ngIf="!user" class="header__button">
+      <a button class="btn btn-social btn-google" (click)="signInWithFB()"
+        >Login with Facebook
+      </a>
     </div>
-    <div *ngIf="userIsAuthenticated" class="header__button">
-      <a (click)="onLogout()">Logout</a>
+    <div *ngIf="user" class="header__button" style="padding: 0.6rem 0.8rem">
+      <div class="user__group">
+        <div class="user__photo">
+          <img [src]="user.photoUrl" alt="userName" />
+        </div>
+        <div class="user__name">
+          {{ userName }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="user" class="header__button">
+      <a (click)="signOut()"
+        >Logout
+        <fa-icon [icon]="signOutIcon"></fa-icon>
+      </a>
     </div>
   </div>
 </div>

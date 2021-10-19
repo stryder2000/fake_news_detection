@@ -19,6 +19,7 @@
 .header__group {
   display: flex;
   margin-right: 5px;
+  align-items: center;
 }
 
 .header__button {
@@ -40,4 +41,20 @@
 
 .header__button a:hover {
   color: var(--color-white);
+}
+
+.user__group {
+  display: flex;
+  align-items: center;
+}
+
+.user__photo img {
+  width: 1.8rem;
+  border-radius: 5rem;
+  margin-right: 0.5rem;
+}
+
+.user__name {
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
