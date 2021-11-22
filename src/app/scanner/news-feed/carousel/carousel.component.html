@@ -1,0 +1,27 @@
+<div class="carousel">
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <img
+      *ngIf="i === currentSlide"
+      [src]="slide.urlToImage"
+      class="slide"
+      [@slideAnimation]="animationType"
+      [alt]="slide.title"
+    />
+
+    <div *ngIf="i === currentSlide" class="slide__text slide__title">
+      <a [href]="slide.url">{{ slide.title }}</a>
+    </div>
+    <div *ngIf="i === currentSlide" class="slide__text slide__desc">
+      {{ slide.description }}
+    </div>
+  </ng-container>
+
+  <!-- controls -->
+  <button class="control prev" (click)="onPreviousClick()">
+    <span class="arrow left"></span>
+  </button>
+  <button class="control next" (click)="onNextClick()">
+    <span class="arrow right"></span>
+  </button>
+  <div class="backdrop">&nbsp;</div>
+</div>

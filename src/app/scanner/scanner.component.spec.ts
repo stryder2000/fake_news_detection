@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VidUploadComponent } from './vid-upload.component';
+import { ScannerComponent } from './scanner.component';
 
-describe('VidUploadComponent', () => {
-  let component: VidUploadComponent;
-  let fixture: ComponentFixture<VidUploadComponent>;
+describe('ScannerComponent', () => {
+  let component: ScannerComponent;
+  let fixture: ComponentFixture<ScannerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VidUploadComponent ]
+      declarations: [ ScannerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VidUploadComponent);
+    fixture = TestBed.createComponent(ScannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

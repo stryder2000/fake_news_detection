@@ -4,28 +4,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
-import { VidUploadComponent } from './vid-upload/vid-upload.component';
-import { PicUploadComponent } from './pic-upload/pic-upload.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { SocialAuthServiceConfig, SocialLoginModule, GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import {MatIconModule} from '@angular/material/icon';
+import { ScannerComponent } from './scanner/scanner.component';
+import { NewsFeedComponent } from './scanner/news-feed/news-feed.component';
+import { CarouselComponent } from './scanner/news-feed/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VidUploadComponent,
     LandingPageComponent,
-    PicUploadComponent,
-    HeaderComponent
+    HeaderComponent,
+    ScannerComponent,
+    NewsFeedComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     SocialLoginModule,
     FontAwesomeModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [
     {

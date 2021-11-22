@@ -1,0 +1,80 @@
+.row {
+  display: flex;
+  position: relative;
+  margin: 5rem;
+}
+
+.left {
+  display: block;
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.border {
+  background-color: var(--color-border-dark);
+  width: 1px;
+}
+
+.right {
+  display: block;
+  width: 49%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.heading--primary {
+  font-size: 1.65rem;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.heading--primary span {
+  background-image: linear-gradient(to bottom right, red, green, blue);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.heading--secondary {
+  font-size: 1.15rem;
+}
+
+.search_icon {
+  height: 35px;
+  width: 35px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2px;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+}
+
+.search_icon > svg {
+  color: #1976d2;
+  fill: #1976d2;
+}
+
+/* .scan__button {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 68, 255),
+    rgb(224, 224, 224)
+  );
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.1);
+  font-size: 1.15rem;
+  font-weight: 300;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 2rem;
+  transition: all 0.4s;
+} */
