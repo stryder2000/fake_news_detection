@@ -10,6 +10,22 @@
   padding-bottom: 3.5rem;
   display: flex;
   position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .landing-page__banner {
+    flex-direction: column;
+  }
+
+  .right {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .landing-page__banner:not(:last-child) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .landing-page__banner:not(:last-child) {
@@ -17,9 +33,14 @@
 }
 
 .left {
-  display: block;
-  width: 60%;
-  margin-right: 10rem;
+  display: inline-block;
+
+  width: 100%;
+  margin-right: 4rem;
+}
+
+.right {
+  text-align: right;
 }
 
 .landing-page__banner--heading {
@@ -38,6 +59,11 @@
   font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.5;
+}
+
+.landing-page__banner--txt {
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 .landing-page__content1--img {

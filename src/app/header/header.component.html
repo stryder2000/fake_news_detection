@@ -6,12 +6,12 @@
         alt="FakeNewsDetection Logo"
         class="header__brand--logo"
       />
-      Fake News Detector</a
-    >
+      <p class="header__brand--txt">Fake News Detector</p>
+    </a>
   </div>
 
   <div class="header__group">
-    <a *ngIf="user" class="header__button" routerLink="/scanner">Scanner</a>
+    <a *ngIf="user" class="header__button" routerLink="/scanner">Detector</a>
     <a *ngIf="!user" class="header__button" (click)="signInWithGoogle()"
       >Login with Google
     </a>

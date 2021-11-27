@@ -1,9 +1,7 @@
 <div class="scanner">
   <div class="row">
     <div class="left">
-      <h2 class="heading--primary">
-        Scan & Detect Deepfake <span>Images</span>
-      </h2>
+      <h2 class="heading--primary">Scan & Detect Fake <span>Images</span></h2>
       <h3 class="heading--secondary">Place an image link or upload an image</h3>
       <div class="form__group">
         <label for="img" class="search_icon--label"
@@ -35,15 +33,49 @@
               </g>
             </svg></div
         ></label>
-        <input type="file" id="img" style="display: none" accept="image/*" />
+        <!-- <input type="file" id="img" style="display: none" accept="image/*" /> -->
+        <input
+          #imageInput
+          type="file"
+          id="img"
+          style="display: none"
+          accept="image/*"
+        />
       </div>
-      <a href="#" class="rgb__button">Detect</a>
+
+      <!-- <div *ngIf="showResult" class="img-preview-container">
+        <div
+          class="img-preview{{
+            selectedFile.status === 'fail' ? '-error' : ''
+          }}"
+          [ngStyle]="{ 'background-image': 'url(' + selectedFile.src + ')' }"
+        ></div>
+
+        <div *ngIf="selectedFile.pending" class="spinner-overlay">
+          <div class="spinner"></div>
+        </div>
+
+        <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success">
+          Detection Successful!
+          <p class="img__result">
+            Fake image probablity: {{ this.selectedFile.percent }}%
+          </p>
+        </div>
+        <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger">
+          Detection Failed!
+        </div>
+        <div *ngIf="!selectedFile.pending">
+          <a (click)="resetFile()" class="rgb__button"
+            >Click here to Detect again</a
+          >
+        </div>
+      </div> -->
+
+      <a (click)="processFile(imageInput)" class="rgb__button">Detect</a>
     </div>
     <span class="border">&nbsp;</span>
     <div class="right">
-      <h2 class="heading--primary">
-        Scan & Detect Deepfake <span>Videos</span>
-      </h2>
+      <h2 class="heading--primary">Scan & Detect Fake <span>Videos</span></h2>
       <h3 class="heading--secondary">Place a video link or upload a video</h3>
       <div class="form__group">
         <label for="vid" class="search_icon--label"
@@ -75,9 +107,43 @@
               </g>
             </svg></div
         ></label>
-        <input type="file" id="vid" style="display: none" accept="video/*" />
+        <input
+          #videoInput
+          type="file"
+          id="vid"
+          style="display: none"
+          accept="video/*"
+        />
       </div>
-      <a href="#" class="rgb__button">Detect</a>
+
+      <a (click)="processFile2(videoInput)" class="rgb__button">Detect</a>
+    </div>
+
+    <div *ngIf="showResult" class="img-preview-container">
+      <!-- <div class="img-preview-container"> -->
+      <div
+        class="img-preview{{ selectedFile.status === 'fail' ? '-error' : '' }}"
+        [ngStyle]="{ 'background-image': 'url(' + selectedFile.src + ')' }"
+      ></div>
+
+      <div *ngIf="selectedFile.pending" class="spinner-overlay">
+        <div class="spinner"></div>
+      </div>
+
+      <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success">
+        Detection Successful!
+        <p class="img__result">
+          Fake probablity: {{ this.selectedFile.percent }}%
+        </p>
+      </div>
+      <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger">
+        Detection Failed!
+      </div>
+      <div *ngIf="!selectedFile.pending">
+        <a (click)="resetFile()" class="rgb__button pos__bottom--center"
+          >Click here to Detect again</a
+        >
+      </div>
     </div>
   </div>
 
