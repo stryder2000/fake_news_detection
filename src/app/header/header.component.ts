@@ -27,6 +27,8 @@ export class HeaderComponent implements OnInit {
   }
 
   signOut(): void {
+    this.loggedIn = false;
+    localStorage.setItem('loggedIn', `${this.loggedIn}`);
     this.authService.signOut();
   }
 

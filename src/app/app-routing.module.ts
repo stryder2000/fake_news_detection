@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router' // enables routing
 
-import { PicUploadComponent } from './pic-upload/pic-upload.component'
-import { VidUploadComponent } from './vid-upload/vid-upload.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ScannerComponent } from './scanner/scanner.component';
 
 const loginState = localStorage.getItem('loggedIn');
 
@@ -16,8 +15,7 @@ let routes : Routes = [
 if(loginState == 'true'){
   routes = [
     {path:'', component : LandingPageComponent},
-    {path:'picupload', component : PicUploadComponent, },
-    {path:'vidupload', component : VidUploadComponent }
+    {path:'scanner', component : ScannerComponent, }
   ]
 }
 

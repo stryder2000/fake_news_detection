@@ -1,25 +1,20 @@
 <div class="header">
   <div>
-    <a routerLink="/" class="header__brand">Fake News Detector</a>
+    <a routerLink="/" class="header__brand">
+      <img
+        src="../../assets/logo.png"
+        alt="FakeNewsDetection Logo"
+        class="header__brand--logo"
+      />
+      <p class="header__brand--txt">Fake News Detector</p>
+    </a>
   </div>
 
   <div class="header__group">
-    <div *ngIf="user" class="header__button">
-      <a routerLink="/picupload">Picture Upload</a>
-    </div>
-    <div *ngIf="user" class="header__button">
-      <a routerLink="/vidupload">Video Upload</a>
-    </div>
-    <div *ngIf="!user" class="header__button">
-      <a button class="btn btn-social btn-google" (click)="signInWithGoogle()"
-        >Login with Google
-      </a>
-    </div>
-    <div *ngIf="!user" class="header__button">
-      <a button class="btn btn-social btn-google" (click)="signInWithFB()"
-        >Login with Facebook
-      </a>
-    </div>
+    <a *ngIf="user" class="header__button" routerLink="/scanner">Detector</a>
+    <a *ngIf="!user" class="header__button" (click)="signInWithGoogle()"
+      >Login with Google
+    </a>
     <div *ngIf="user" class="header__button" style="padding: 0.6rem 0.8rem">
       <div class="user__group">
         <div class="user__photo">

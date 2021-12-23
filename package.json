@@ -1,6 +1,7 @@
 {
   "name": "fake-image-detection",
   "version": "0.0.0",
+  "proxy": "192.168.25.230:3500",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -21,9 +22,15 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@fortawesome/angular-fontawesome": "^0.9.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@types/chart.js": "^2.9.34",
+    "angular-bootstrap-md": "^12.0.0",
     "angularx-social-login": "^4.0.1",
+    "animate.css": "^4.1.1",
+    "chart.js": "^2.5.0",
+    "hammerjs": "^2.0.8",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

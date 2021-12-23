@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PicUploadComponent } from './pic-upload.component';
+import { NewsFeedComponent } from './news-feed.component';
 
-describe('PicUploadComponent', () => {
-  let component: PicUploadComponent;
-  let fixture: ComponentFixture<PicUploadComponent>;
+describe('NewsFeedComponent', () => {
+  let component: NewsFeedComponent;
+  let fixture: ComponentFixture<NewsFeedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PicUploadComponent ]
+      declarations: [ NewsFeedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PicUploadComponent);
+    fixture = TestBed.createComponent(NewsFeedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
